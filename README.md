@@ -55,3 +55,10 @@ patterns.
   escaped space) matches a path containing a literal trailing space.
 - **Path normalization** converts OS-native separators to `/` and strips a
   leading `./`, so you can pass `os.path.join` results directly.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
