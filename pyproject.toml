@@ -1,6 +1,6 @@
 [project]
 name = "ignore-match"
-version = "0.1.1"
+version = "0.1.2"
 description = "Match paths against gitignore-style rules, precedence included."
 requires-python = ">=3.10"
 dependencies = []
